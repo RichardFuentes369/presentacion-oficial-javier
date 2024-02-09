@@ -7,4 +7,57 @@ import { Component } from '@angular/core';
 })
 export class LenguajesComponent {
 
+  public Cursos: object[] = [
+    {
+      'name': 'Php',
+      'frameworks': [
+        {
+          'name': 'js',
+          'tagColor': 'blue'
+        },
+        {
+          'name': 'ts',
+          'tagColor': 'blue'
+        }
+      ],
+    },
+    {
+      'name': 'Php',
+      'frameworks': [
+        {
+          'name': 'js',
+          'tagColor': 'blue'
+        },
+        {
+          'name': 'ts',
+          'tagColor': 'blue'
+        }
+      ],
+    },    {
+      'name': 'Php',
+      'frameworks': [
+        {
+          'name': 'js',
+          'tagColor': 'blue'
+        },
+        {
+          'name': 'ts',
+          'tagColor': 'blue'
+        }
+      ],
+    },    {
+      'name': 'Php',
+      'frameworks': [
+        {
+          'name': 'js',
+          'tagColor': 'blue'
+        },
+        {
+          'name': 'ts',
+          'tagColor': 'blue'
+        }
+      ],
+    },
+  ]
+
 }

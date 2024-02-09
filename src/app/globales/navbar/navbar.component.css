@@ -1,4 +1,13 @@
-.claseActiva{
+.claseActiva {
   background-color: aquamarine;
+  text-decoration-line: underline;
+}
+
+.nav-link {
+  transition: 0.9s;
+}
+
+.nav-link:hover {
+  background-color: red;
   text-decoration-line: underline;
 }

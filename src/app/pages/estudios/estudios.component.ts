@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-pages-works',
-  templateUrl: './works.component.html',
-  styleUrl: './works.component.css'
+  selector: 'app-estudios',
+  templateUrl: './estudios.component.html',
+  styleUrl: './estudios.component.css'
 })
-export class WorksComponent {
+export class EstudiosComponent {
 
   public Cursos: object[] = [
     {

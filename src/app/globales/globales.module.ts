@@ -6,6 +6,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { AboutmeComponent } from '../pages/aboutme/aboutme.component';
+import { EstudiosComponent } from '../pages/estudios/estudios.component';
 import { CursosComponent } from '../pages/cursos/cursos.component';
 import { HobbiesComponent } from '../pages/hobbies/hobbies.component';
 import { LenguajesComponent } from '../pages/lenguajes/lenguajes.component';
@@ -16,6 +17,7 @@ import { NoexisteComponent } from '../pages/noexiste/noexiste.component';
 const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
   { path: 'about', component: AboutmeComponent },
+  { path: 'estudios', component: EstudiosComponent },
   { path: 'cursos', component: CursosComponent },
   { path: 'hobbies', component: HobbiesComponent },
   { path: 'lenguajes', component: LenguajesComponent },
