@@ -1,317 +1,93 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-estudios',
+  selector: 'app-pages-estudios',
   templateUrl: './estudios.component.html',
   styleUrl: './estudios.component.css'
 })
 export class EstudiosComponent {
 
-  public Cursos: object[] = [
+  public Estudios = [
     {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
+      "name": "Estudios",
+      "expandir": true,
+      "estudios": [
         {
-          'name': 'js',
-          'tagColor': 'blue'
+          "name": "Primaria",
+          "tagColor": "blue",
+          "cursos": [
+            {
+              'nombre': 'Instituto Madre del Buen Consejo 2003-2003',
+              'link': ''
+            },
+            {
+              'nombre': 'Colegio Metropolitano del Sur 2004-2007',
+              'link': ''
+            },
+          ]
         },
         {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
+          "name": "Bachillerato",
+          "tagColor": "blue",
+          "cursos": [
+            {
+              'nombre': 'Instituto Empresarial Gabriela Mistral 2008-2014',
+              'link': ''
+            },
+          ]
+        },
+        {
+          "name": "Universitarios",
+          "tagColor": "blue",
+          "cursos": [
+            {
+              'nombre': 'Tecnología en desarrollo de sistemas informaticos 2015-2019',
+              'link': ''
+            },
+            {
+              'nombre': 'Ingenieria de sistemas 2024',
+              'link': ''
+            },
+          ]
+        },
       ],
     },
     {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
+      "name": "Cursos",
+      "expandir": false,
+      "estudios": [
         {
-          'name': 'js',
-          'tagColor': 'blue'
+          "name": "Udemy",
+          "tagColor": "blue",
+          "cursos": [
+            {
+              'nombre': 'Angular de cero a experto Fernando Herrera',
+              'link': ''
+            },
+            {
+              'nombre': 'Nest desarrollo backend escalable Fernando Herrera',
+              'link': 'https://www.udemy.com/certificate/UC-4d390a9a-f74f-41ab-a915-37e46323726e/'
+            },
+            {
+              'nombre': 'React de cero a experto hooks mern Fernando Herrera',
+              'link': ''
+            },
+            {
+              'nombre': 'Laravel y vue avanzado Jorge Alexis Paz Barrera',
+              'link': 'https://www.udemy.com/certificate/UC-bc1323f8-26ed-4240-9d83-97eaba53a460/'
+            },
+            {
+              'nombre': 'Curso de php y mvc Lubutech dev',
+              'link': ''
+            },
+          ]
         },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
-      ],
-    },
-    {
-      'name': 'Develop in Angular',
-      'date_end': '2023-02-02',
-      'certificate': 'https://www.udemy.com/home/my-courses/learning/',
-      'progreso': '30',
-      'lenguajes': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
-        },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
       ],
     },
   ]
+
+  openCollapse(position: number){
+    this.Estudios[position].expandir = !this.Estudios[position].expandir
+  }
 
 }

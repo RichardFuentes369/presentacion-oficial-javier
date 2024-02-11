@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
+  copyrigth = " 2024 Javier Ricardo Baron Fuentes"
+
 }

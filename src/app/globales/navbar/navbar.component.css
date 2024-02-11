@@ -1,5 +1,5 @@
 .claseActiva {
-  background-color: aquamarine;
+  background-color: green;
   text-decoration-line: underline;
 }
 
@@ -8,6 +8,6 @@
 }
 
 .nav-link:hover {
-  background-color: red;
+  background-color: rgb(140, 230, 5);
   text-decoration-line: underline;
 }

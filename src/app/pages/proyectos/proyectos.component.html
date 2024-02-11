@@ -1,28 +1,44 @@
 <div class="mt-4 container">
 
-  <div class="col-md-12 row">
-    <div class="col-md-4 text-center"  *ngFor="let item of Cursos">
-      <div class="card m-2">
-        <div class="">
-          <img class="card-img-top" src="../../../favicon.ico" alt="Card image cap" style="height: 5rem; width: 5rem;">
-        </div>
-        <div class="card-body">
-          <h5 class="card-title">Card title</h5>
-          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          <div class="">
-            <div class="p-2">
-              <button class="btn btn-sm btn-primary">Mi primer diploma</button>
-            </div>
-            <div class="p-2">
-              <button class="btn btn-sm btn-primary">Mi primer diploma</button>
-            </div>
-            <div class="p-2">
-              <button class="btn btn-sm btn-primary">Mi primer diploma</button>
+  <div class="" *ngFor="let Participacion of Proyectos">
+    <div class="card mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
+      <div class="card-header">
+        <h3>{{Participacion.name}}</h3>
+      </div>
+      <!-- <div class="card-body">
+        <p>
+          {{Participacion.Descripcion}}
+        </p>
+      </div> -->
+    </div>
+
+    <div class="card m-2 p-4" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
+      <div class="row">
+        <div class="col-md-4 text-center" *ngFor="let proyecto of Participacion.proyectos">
+          <div class="card mt-4 mb-4">
+            <div class="card-body">
+              <h5 class="card-title">{{proyecto.name}}</h5>
+
+              <div class="card-body">
+                <textarea class="form-control" style="resize: none;" cols="20" rows="6" readonly>{{proyecto.descripction}}</textarea>
+              </div>
+
+              <div class="card-footer">
+                <div class="col-sm-12 row">
+                  <div class="mr-2 ml-1" *ngFor="let lenguaje of proyecto.lenguajes">
+                      <span class="card text-white font-weight-lighter pl-1 pr-1" [style]="{'background-color': lenguaje.color}">
+                        {{lenguaje.name}}
+                      </span>
+                  </div>
+                </div>
+                <a class="btn btn-sm btn-primary mt-2" [href]="proyecto.repositorio" target="_blank">Ir a</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+
   </div>
 
 </div>

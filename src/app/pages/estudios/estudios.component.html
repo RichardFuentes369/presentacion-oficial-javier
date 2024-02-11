@@ -1,22 +1,70 @@
 <div class="mt-4 container">
-
-  <div class="col-md-12">
-    <span>Tecnologico</span>
-    <ol>
-      <li>Tecnologia en desarrollo de sistemas informaticos</li>
-    </ol>
-    <span>Pregrado</span>
-    <ol>
-      <li>Ingeniero de Sistemas</li>
-    </ol>
-    <span>Cursos</span>
-    <ol>
-      <li>Laravel</li>
-      <li>Nest</li>
-      <li>Angular</li>
-      <li>React</li>
-      <li>Next</li>
-    </ol>
+  <div class="card mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
+    <div class="card-header">
+      <h3>Lenguajes y frameworks</h3>
+    </div>
+    <!-- <div class="card-body">
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi obcaecati sequi adipisci, porro voluptatem culpa dolorem magni tempore necessitatibus recusandae similique nobis debitis eligendi non molestias sapiente vitae perferendis? Facere.
+      </p>
+    </div> -->
   </div>
 
+  <div id="accordion" class="m-2">
+    <div class="card" style="box-shadow: 7px 7px 15px #592A08; height: 100%;" >
+      <div class="card-body">
+        <div
+        class="card mb-2"
+        *ngFor="
+          let item of Estudios
+          let i = index
+        ">
+        <div class="card-header" [id]="'heading'+i">
+          <h5 class="mb-0">
+            <button
+              class="btn btn-link"
+              data-toggle="collapse"
+              [attr.data-target]="'#collapse'+i"
+              aria-expanded="true"
+              [attr.aria-controls]="'#collapse'+i"
+              (click)="openCollapse(i)"
+            >
+              {{item.name}}
+              <span class="badge badge-primary badge-pill">({{item.estudios?.length}})</span>
+            </button>
+          </h5>
+        </div>
+
+        <div [id]="'collapse'+i" class="collapse" [ngClass]="item.expandir == true ? 'show' : ''" a-labelledby="headingOne" data-parent="#accordion">
+
+          <div class="container">
+            <div
+              class="card mt-2 mb-2"
+              *ngFor="
+                let cursos of item.estudios
+              "
+            >
+              <div class="card-header">
+                {{cursos.name}} ({{cursos.cursos.length}})
+              </div>
+              <div class="card-body">
+                <ul *ngFor="let curso of cursos.cursos">
+                  <li *ngIf="curso.link == ''">
+                    {{curso.nombre}}
+                  </li>
+                  <li *ngIf="curso.link != ''">
+                    <a [href]="curso.link" target="_blank">{{curso.nombre}}</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      </div>
+    </div>
+
+  </div>
 </div>
+

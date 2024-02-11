@@ -1,28 +1,28 @@
 import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import {FormsModule} from '@angular/forms';
 
-import { HobbiesComponent } from '../pages/hobbies/hobbies.component';
 import { LenguajesComponent } from './lenguajes/lenguajes.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
-import { WorksComponent } from './works/works.component';
 import { EstudiosComponent } from './estudios/estudios.component';
+import { AboutmeComponent } from './aboutme/aboutme.component'
 
 @NgModule({
   declarations: [
-    HobbiesComponent,
+    AboutmeComponent,
     LenguajesComponent,
     ProyectosComponent,
-    WorksComponent,
     EstudiosComponent
   ],
   exports: [
-    HobbiesComponent,
+    AboutmeComponent,
     LenguajesComponent,
     ProyectosComponent,
-    WorksComponent
+    EstudiosComponent,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
 })
 export class PagesModule { }

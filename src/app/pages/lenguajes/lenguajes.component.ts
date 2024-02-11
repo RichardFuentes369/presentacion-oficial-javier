@@ -7,57 +7,97 @@ import { Component } from '@angular/core';
 })
 export class LenguajesComponent {
 
-  public Cursos: object[] = [
+  public Lenguajes = [
     {
-      'name': 'Php',
-      'frameworks': [
+      "name": "Backend",
+      "expandir": true,
+      "lenguajes": [
         {
-          'name': 'js',
-          'tagColor': 'blue'
+          "name": "Node",
+          "tagColor": "blue",
+          "frameworks": [
+            'Nest'
+          ]
         },
         {
-          'name': 'ts',
-          'tagColor': 'blue'
+          "name": "Php",
+          "tagColor": "blue",
+          "frameworks": [
+            'Laravel',
+            'Codenigther'
+          ]
         }
       ],
     },
     {
-      'name': 'Php',
-      'frameworks': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
+      "name": "Frontend",
+      "expandir": false,
+      "lenguajes": [
+          {
+          "name": "Css",
+          "tagColor": "blue",
+          "frameworks": [
+            'Boostrap4',
+            'Boostrap5',
+            'Element ui',
+          ]
         },
         {
-          'name': 'ts',
-          'tagColor': 'blue'
+          "name": "Fuentes",
+          "tagColor": "blue",
+          "frameworks": [
+            'GoogleFonts',
+          ]
+        },
+        {
+          "name": "Iconos",
+          "tagColor": "blue",
+          "frameworks": [
+            'FontAwesome',
+          ]
         }
       ],
-    },    {
-      'name': 'Php',
-      'frameworks': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
+    },
+    {
+      "name": "Bases de datos",
+      "expandir": false,
+      "lenguajes": [
+          {
+          "name": "Sql",
+          "tagColor": "blue",
+          "frameworks": [
+            'MySql',
+            'PostgreSQl',
+          ]
         },
         {
-          'name': 'ts',
-          'tagColor': 'blue'
+          "name": "NoSql",
+          "tagColor": "blue",
+          "frameworks": [
+            'Mongo',
+          ]
         }
       ],
-    },    {
-      'name': 'Php',
-      'frameworks': [
-        {
-          'name': 'js',
-          'tagColor': 'blue'
+    },
+    {
+      "name": "Versionamiento",
+      "expandir": false,
+      "lenguajes": [
+          {
+          "name": "Git",
+          "tagColor": "blue",
+          "frameworks": [
+            'GitHub',
+            'GitLab',
+            'Azure',
+          ]
         },
-        {
-          'name': 'ts',
-          'tagColor': 'blue'
-        }
       ],
     },
   ]
+
+  openCollapse(position: number){
+    this.Lenguajes[position].expandir = !this.Lenguajes[position].expandir
+  }
 
 }

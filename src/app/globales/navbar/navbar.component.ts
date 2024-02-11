@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class NavbarComponent {
 
+  xxx = 'collapse'
+
+  openToogle(){
+    this.xxx ===  (this.xxx = '') ? this.xxx = 'collapse' : this.xxx = ''
+  }
+
 }

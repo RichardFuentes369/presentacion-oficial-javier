@@ -1,31 +1,67 @@
-<div class="mt-5 container">
-  Lorem ipsum, dolor sit amet consectetur adipisicing elit. Earum hic dolore, aliquam, expedita nobis sed dicta voluptates beatae optio quia culpa rem voluptate et aliquid! Recusandae pariatur facilis assumenda quo.
-  Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, ratione excepturi ab reprehenderit adipisci ut dolor velit est non iure repellendus consequatur magnam tempore consectetur? Itaque cumque placeat ab quam.
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Harum asperiores omnis doloremque sunt totam ut rerum ipsum accusantium eum atque nemo in, velit mollitia non veritatis, similique delectus vitae ipsam?
-  Lorem ipsum dolor sit amet consect  etur adipisicing elit. Pariatur possimus ipsa neque. Eveniet veritatis non, asperiores facere nobis vero ipsum. Ipsam, cum! Numquam consectetur nisi quis, corporis cupiditate nostrum ad.
-  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus nesciunt aliquid quo! Officiis error ipsa nisi fugiat cum ea porro, possimus odit laudantium qui inventore sed optio ipsum eum velit!
+<div class="mt-4 container">
 
+  <div class="card mt-4 mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
+    <div class="card-header">
+      <h3>Sobre m&iacute;</h3>
+    </div>
+  </div>
+  <div class="card mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
+    <div class="card-body">
 
-  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100" src="../../../favicon.ico" alt="First slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="../../../favicon.ico" alt="Second slide">
-      </div>
-      <div class="carousel-item">
-        <img class="d-block w-100" src="../../../favicon.ico" alt="Third slide">
+      <div class="col-sm-12 row">
+        <div class="col-sm-6 text-center mb-4">
+          <img class="img-thumbnail photo-presentacion" src="../../../assets/img/me.jpg" alt="">
+        </div>
+        <div class="col-sm-6">
+          <p class="">
+            Mi nombre es Javier Ricardo Baron Fuentes y en la actualidad tengo {{calcularEdad()}} años.
+          </p>
+
+          <p class="">
+            Soy egresado de las Unidades Tecnologicas de Santander (UTS), con el grado de Tecnologo en desarrollo de sistemas informatios.
+            Luego de obtener mi titulo empece a buscar trabajo encasillandome en el desarrollo de software web como frontend y backend usando lenguajes populares como lo son
+            php, jquery, node, hojas de estilo como css, boostrap y motores de bases de datos como postgresql y mysql.
+          </p>
+
+          <p class="">
+            Sin embargo con el fin de ampliar mi conocimiento, constantemente me encuentro aprendiendo cada dia mas de las tecnologias que manejo, aprovechando cada reto que se me
+            cruce por mi camino.
+          </p>
+
+          <p class="">
+            Me desempeño muy bien trabajando en equipo ya que aunque puedo manejar varias cosas a la vez, siempre es bueno contar con la experiencia de alguien mas la cual nutre y nos
+            ayuda a sacar las cosas mas rapido y con la certeza de que podran salir bien ya que cada rol en un desarrollo es importante para que los proyectos fluyan. <br>
+            Me considero buen compañero de trabajo ya que hasta el momento no e tenido ningun tipo de problemas con nadie, por el contrario trato de ayudar al equipo a resolver los
+            problemas que se les presenten siempre y cuando esten a mi alcanse. Y si estas no estan a mi alcanse siempre me gusta saber como fue la soluci&oacute;n por si depronto
+            se me presenta el problema a mi o si depronto le puedo colaborar a otro compañero en un futuro.
+          </p>
+
+          <p class="">
+            Me considero una persona honesta, responsable y comprometida con cada reto que se me ponga, llegando a aprender y proponer cosas que puedan fluir con los requerimientos.
+          </p>
+        </div>
       </div>
     </div>
-    <a class="carousel-control-prev" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+  </div>
+
+  <div class="card mt-4 mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
+    <div class="card-header">
+      <h3>Experiencia</h3>
+    </div>
+  </div>
+  <div class="card mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
+    <div class="card-body text-center">
+      <div class="linea-tiempo">
+        <div *ngFor="let item of Trabajos" class="momento">
+          <h3>{{item.temporada}}</h3>
+          <div class="descripcion">
+            {{item.empresa}} <br>
+            {{item.periodo}} <br>
+            {{item.tiempo}}
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
 
