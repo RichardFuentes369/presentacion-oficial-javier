@@ -12,9 +12,9 @@ export class AboutmeComponent {
   public Trabajos = [
     {
       "empresa": "Nexura International SAS",
-      "periodo": "05/07/2021 - 30/11/2023",
-      "temporada": "2021-2023",
-      "tiempo": this.tiempoLaborado('05-07-2021','30-11-2023')
+      "periodo": "05/07/2022 - 30/11/2023",
+      "temporada": "2022-2023",
+      "tiempo": this.tiempoLaborado('05-07-2022','30-11-2023')
     },
     {
       "empresa": "SmartData & Automation",
