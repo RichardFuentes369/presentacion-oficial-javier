@@ -62,7 +62,7 @@ export class EstudiosComponent {
           "cursos": [
             {
               'nombre': 'Angular de cero a experto Fernando Herrera',
-              'link': ''
+              'link': 'https://www.udemy.com/certificate/UC-70a1a51c-38d4-4dce-aab6-bd28b398f23c/'
             },
             {
               'nombre': 'Nest desarrollo backend escalable Fernando Herrera',

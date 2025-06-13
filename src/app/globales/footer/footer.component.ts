@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import moment from 'moment';
 
 @Component({
   selector: 'app-globales-footer',
@@ -7,6 +8,8 @@ import { Component } from '@angular/core';
 })
 export class FooterComponent {
 
-  copyrigth = " 2024 Javier Ricardo Baron Fuentes"
+
+  year = moment().format('YYYY')
+  copyrigth = ` ${this.year} Javier Ricardo Baron Fuentes`
 
 }
