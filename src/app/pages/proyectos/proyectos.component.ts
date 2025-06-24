@@ -146,23 +146,19 @@ export class ProyectosComponent {
         },
         {
           "tagColor": "blue",
-          "name": "Sistema de Turnos",
-          "descripction": " Software web para el control de atencion a usuarios por medio de turnos",
-          "status": "Finalizado",
+          "name": "Template core - angular nest",
+          "descripction": " Software web para gestión de permisos y modulos",
+          "status": "Construcción",
           "typeApp": "Aplicativo web",
-          "repositorio": "https://github.com/RichardFuentes369/turnero-prueba-offimedicas",
+          "repositorio": "https://github.com/RichardFuentes369/angular_csr_nest",
           "lenguajes": [
             {
-              'name': 'Php',
-              'color': 'blue'
-            },
-            {
-              'name': 'Laravel',
+              'name': 'Nest',
               'color': 'red'
             },
             {
-              'name': 'Vue',
-              'color': 'green'
+              'name': 'Angular',
+              'color': 'red'
             }
           ]
         },
