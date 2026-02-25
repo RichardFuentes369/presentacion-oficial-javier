@@ -22,15 +22,23 @@ export class ProyectosComponent {
           "lenguajes": [
             {
               'name': 'Php',
-              'color': 'blue'
+              'color': 'blue',
+              'icon': 'devicon-php-plain colored'
             },
             {
               'name': 'Laravel',
-              'color': 'red'
+              'color': 'red',
+              'icon': 'devicon-laravel-plain colored'
             },
             {
               'name': 'Vue',
-              'color': 'green'
+              'color': 'green',
+              'icon': 'devicon-vuejs-plain colored'
+            },
+            {
+              'name': 'JavaScript',
+              'color': 'blue',
+              'icon': 'devicon-javascript-plain colored'
             }
           ]
         },
@@ -44,15 +52,23 @@ export class ProyectosComponent {
           "lenguajes": [
             {
               'name': 'Php',
-              'color': 'blue'
+              'color': 'blue',
+              'icon': 'devicon-php-plain colored'
             },
             {
               'name': 'Laravel',
-              'color': 'red'
+              'color': 'red',
+              'icon': 'devicon-laravel-plain colored'
             },
             {
               'name': 'Vue',
-              'color': 'green'
+              'color': 'green',
+              'icon': 'devicon-vuejs-plain colored'
+            },
+            {
+              'name': 'JavaScript',
+              'color': 'blue',
+              'icon': 'devicon-javascript-plain colored'
             }
           ]
         },
@@ -66,15 +82,23 @@ export class ProyectosComponent {
           "lenguajes": [
             {
               'name': 'Php',
-              'color': 'blue'
+              'color': 'blue',
+              'icon': 'devicon-php-plain colored'
             },
             {
               'name': 'Laravel',
-              'color': 'red'
+              'color': 'red',
+              'icon': 'devicon-laravel-plain colored'
             },
             {
               'name': 'Vue',
-              'color': 'green'
+              'color': 'green',
+              'icon': 'devicon-vuejs-plain colored'
+            },
+            {
+              'name': 'JavaScript',
+              'color': 'blue',
+              'icon': 'devicon-javascript-plain colored'
             }
           ]
         },
@@ -88,15 +112,23 @@ export class ProyectosComponent {
           "lenguajes": [
             {
               'name': 'Php',
-              'color': 'blue'
+              'color': 'blue',
+              'icon': 'devicon-php-plain colored'
             },
             {
               'name': 'Laravel',
-              'color': 'red'
+              'color': 'red',
+              'icon': 'devicon-laravel-plain colored'
             },
             {
               'name': 'Vue',
-              'color': 'green'
+              'color': 'green',
+              'icon': 'devicon-vuejs-plain colored'
+            },
+            {
+              'name': 'JavaScript',
+              'color': 'blue',
+              'icon': 'devicon-javascript-plain colored'
             }
           ]
         },
@@ -110,15 +142,18 @@ export class ProyectosComponent {
           "lenguajes": [
             {
               'name': 'Php',
-              'color': 'blue'
+              'color': 'blue',
+              'icon': 'devicon-php-plain colored'
             },
             {
               'name': 'Laravel',
-              'color': 'red'
+              'color': 'red',
+              'icon': 'devicon-laravel-plain colored'
             },
             {
-              'name': 'Vue',
-              'color': 'green'
+              'name': 'JavaScript',
+              'color': 'blue',
+              'icon': 'devicon-javascript-plain colored'
             }
           ]
         },
@@ -132,15 +167,18 @@ export class ProyectosComponent {
           "lenguajes": [
             {
               'name': 'Php',
-              'color': '#507CF2'
+              'color': '#507CF2',
+              'icon': 'devicon-php-plain colored'
             },
             {
               'name': 'Laravel',
-              'color': 'red'
+              'color': 'red',
+              'icon': 'devicon-laravel-plain colored'
             },
             {
-              'name': 'Vue',
-              'color': 'green'
+              'name': 'JavaScript',
+              'color': 'blue',
+              'icon': 'devicon-javascript-plain colored'
             }
           ]
         },
@@ -153,18 +191,24 @@ export class ProyectosComponent {
           "repositorio": "https://github.com/RichardFuentes369/angular_csr_nest",
           "lenguajes": [
             {
+              'name': 'Node',
+              'color': 'red',
+              'icon': 'devicon-nodejs-plain colored'
+            },            
+            {
               'name': 'Nest',
-              'color': 'red'
+              'color': 'red',
+              'icon': 'devicon-nestjs-original colored'
             },
             {
               'name': 'Angular',
-              'color': 'red'
+              'color': 'red',
+              'icon': 'devicon-angular-plain'
             }
           ]
         },
       ],
     },
   ]
-
 
 }

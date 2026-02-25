@@ -7,9 +7,5 @@ import moment from 'moment';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-
-
   year = moment().format('YYYY')
-  copyrigth = ` ${this.year} Javier Ricardo Baron Fuentes`
-
 }

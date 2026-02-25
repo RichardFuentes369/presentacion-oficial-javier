@@ -1,15 +1,4 @@
-<div class="mt-4 container">
-  <div class="card mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
-    <div class="card-header">
-      <h3>Lenguajes y frameworks</h3>
-    </div>
-    <!-- <div class="card-body">
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi obcaecati sequi adipisci, porro voluptatem culpa dolorem magni tempore necessitatibus recusandae similique nobis debitis eligendi non molestias sapiente vitae perferendis? Facere.
-      </p>
-    </div> -->
-  </div>
-
+<div>
   <div id="accordion" class="m-2">
     <div class="card" style="box-shadow: 7px 7px 15px #592A08; height: 100%;" >
       <div class="card-body">
@@ -30,7 +19,7 @@
               (click)="openCollapse(i)"
             >
               {{item.name}}
-              <span class="badge badge-primary badge-pill">({{item.lenguajes?.length}})</span>
+              <span class="badge badge-primary badge-pill">({{item.lenguajes.length}})</span>
             </button>
           </h5>
         </div>

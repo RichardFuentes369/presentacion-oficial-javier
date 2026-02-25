@@ -10,6 +10,7 @@ import { EstudiosComponent } from '../pages/estudios/estudios.component';
 import { LenguajesComponent } from '../pages/lenguajes/lenguajes.component';
 import { ProyectosComponent } from '../pages/proyectos/proyectos.component';
 import { NoexisteComponent } from '../pages/noexiste/noexiste.component';
+import { BannerComponent } from './banner/banner.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'about', pathMatch: 'full' },
@@ -25,10 +26,12 @@ const routes: Routes = [
     RouterModule,
     NavbarComponent,
     FooterComponent,
+    BannerComponent
   ],
   declarations: [
     NavbarComponent,
     FooterComponent,
+    BannerComponent,
   ],
   imports: [
     RouterModule.forRoot(routes),

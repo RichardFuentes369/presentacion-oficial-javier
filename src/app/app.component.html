@@ -1,11 +1,16 @@
-<app-globales-navbar></app-globales-navbar>
+<div class="main-layout">
+  <header id="header-wrapper">
+    <app-globales-banner></app-globales-banner>
+    <app-globales-navbar></app-globales-navbar>
+  </header>
 
-<div>
-  <br><br><br>
-  <div class="container">
-    <router-outlet></router-outlet>
-  </div>
-  <br><br><br>
+  <main id="content-scroll-area" class="flex-grow-1">
+    <div class="container mt-4 mb-4">
+      <router-outlet></router-outlet>
+    </div>
+  </main>
+
+  <footer id="footer-wrapper">
+    <app-globales-footer></app-globales-footer>
+  </footer>
 </div>
-
-<app-globales-footer></app-globales-footer>

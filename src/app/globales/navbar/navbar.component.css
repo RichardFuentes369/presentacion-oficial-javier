@@ -1,13 +1,47 @@
-.claseActiva {
-  background-color: green;
-  text-decoration-line: underline;
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; 
+  overflow: hidden;
+}
+
+#content-scroll-area {
+  flex-grow: 1;
+  overflow-y: auto; 
+  background-color: #f8f9fc;
+  -webkit-overflow-scrolling: touch;
 }
 
 .nav-link {
-  transition: 0.9s;
+  transition: 0.3s;
+  padding: 1rem !important;
+  color: #a7a9ac !important;
 }
 
-.nav-link:hover {
-  background-color: rgb(140, 230, 5);
-  text-decoration-line: underline;
+.nav-item {
+  &.activo .nav-link {
+    background-color: #598bcc;
+    color: #fff !important;
+  }
+  
+  &:hover .nav-link:not(.activo) {
+    background-color: #224abe;
+    color: #fff !important;
+  }
+}
+
+.navbar-brand {
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+  color: #598bcc !important;
+}
+
+.nav-link {
+    padding-top: 2px !important;
+    padding-bottom: 2px !important;
+    line-height: 2; /* Ajusta este valor a tu gusto */
+}
+
+.nav-item {
+    margin-bottom: 0; 
 }

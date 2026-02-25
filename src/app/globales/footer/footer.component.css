@@ -1,0 +1,10 @@
+#content-scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #f8f9fc;
+  z-index: 1; 
+  position: relative;
+  -webkit-overflow-scrolling: touch;
+}
