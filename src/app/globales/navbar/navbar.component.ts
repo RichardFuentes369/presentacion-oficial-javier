@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Router, NavigationEnd } from '@angular/router';
 import { filter } from 'rxjs/operators';
 
@@ -7,36 +7,42 @@ import { filter } from 'rxjs/operators';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent {
+  public isCollapsed: boolean = false;
+  public isMenuOpen: boolean = false; // Control de menú móvil
+  public isDarkMode: boolean = false;
+  public tituloActual: string = 'Sobre mí';
 
-  xxx: string = 'collapse';
-  tituloActual: string = 'Menú';
+  @Output() sidebarCollapsed = new EventEmitter<boolean>();
 
-  private nombresRutas: Record<string, string> = {
-    '/about': 'Sobre mí',
-    '/estudios': 'Estudios',
-    '/lenguajes': 'Lenguajes',
-    '/proyectos': 'Proyectos'
-  };
-
-  constructor(private router: Router) {}
-
-  ngOnInit(): void {
-    this.actualizarTitulo(this.router.url);
-
+  constructor(private router: Router) {
+    // Detectar ruta actual para actualizar el título móvil automáticamente
     this.router.events.pipe(
       filter(event => event instanceof NavigationEnd)
     ).subscribe((event: any) => {
-      this.actualizarTitulo(event.urlAfterRedirects);
-      this.xxx = 'collapse';
+      this.actualizarTituloRuta(event.urlAfterRedirects);
+      this.isMenuOpen = false; // Cerrar menú móvil al cambiar de ruta
     });
   }
 
-  private actualizarTitulo(url: string): void {
-    this.tituloActual = this.nombresRutas[url] || 'Menú';
+  toggleSidebar() {
+    this.isCollapsed = !this.isCollapsed;
+    this.sidebarCollapsed.emit(this.isCollapsed);
   }
 
-  openToogle(): void {
-    this.xxx = (this.xxx === 'collapse') ? '' : 'collapse';
+  openToogle() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  toggleDarkMode() {
+    this.isDarkMode = !this.isDarkMode;
+    document.body.classList.toggle('dark-mode', this.isDarkMode);
+  }
+
+  private actualizarTituloRuta(url: string) {
+    if (url.includes('estudios')) this.tituloActual = 'Estudios';
+    else if (url.includes('lenguajes')) this.tituloActual = 'Lenguajes';
+    else if (url.includes('proyectos')) this.tituloActual = 'Proyectos';
+    else this.tituloActual = 'Sobre mí';
   }
 }

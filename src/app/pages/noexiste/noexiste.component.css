@@ -1,8 +1,102 @@
-.hijo {
-  position: absolute;
-  top: 40%;
-  left: 25%;
-  right: 21%;
-  margin: -25px 0 0 -25px;
+:host {
+  display: block;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: #2d3748;
+}
 
+.not-found-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+  padding: 1rem;
+}
+
+.error-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  padding: 3rem 2rem;
+  text-align: center;
+  max-width: 450px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.error-icon-wrapper {
+  width: 70px;
+  height: 70px;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  margin: 0 auto 1.5rem auto;
+}
+
+.error-code {
+  display: inline-block;
+  background: rgba(51, 147, 254, 0.1);
+  color: #3393FE;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.error-card h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem 0;
+}
+
+.error-card p {
+  font-size: 0.95rem;
+  color: #64748b;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.error-actions {
+  display: flex;
+  justify-content: center;
+}
+
+.home-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #3393FE;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 12px rgba(51, 147, 254, 0.3);
+}
+
+.home-btn:hover {
+  transform: translateY(-2px);
+  background-color: #2563eb;
+  box-shadow: 0 6px 16px rgba(51, 147, 254, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

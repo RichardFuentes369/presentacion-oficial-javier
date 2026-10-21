@@ -1,1 +1,47 @@
-/* You can add global styles to this file, and also import other style files */
+:root {
+  /* Cambio a Verde llamativo (Emerald/Green) */
+  --primary: #10b981; 
+  --primary-hover: #059669;
+  --primary-light: rgba(16, 185, 129, 0.1);
+  
+  --bg-main: #f1f5f9;
+  --bg-card: #ffffff;
+  --text-main: #0f172a;
+  --text-muted: #64748b;
+  --border-color: #e2e8f0;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.05);
+  --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
+  --navbar-bg: rgba(255, 255, 255, 0.85);
+  
+  /* Badges opcionales ajustados a tono verde */
+  --badge-bg: #d1fae5;
+  --badge-text: #065f46;
+}
+
+body.dark-mode, .dark-mode {
+  /* Verde fosforescente/neón optimizado para modo oscuro */
+  --primary: #34d399;
+  --primary-hover: #6ee7b7;
+  --primary-light: rgba(52, 211, 153, 0.2);
+  
+  --bg-main: #0b0f19;
+  --bg-card: #151c2c;
+  --text-main: #f8fafc;
+  --text-muted: #94a3b8;
+  --border-color: #1e293b;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.3);
+  --shadow-md: 0 10px 30px -5px rgba(0, 0, 0, 0.5);
+  --navbar-bg: rgba(11, 15, 25, 0.85);
+  
+  /* Badges para modo oscuro */
+  --badge-bg: rgba(52, 211, 153, 0.2);
+  --badge-text: #a7f3d0;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  margin: 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}

@@ -10,205 +10,83 @@ export class ProyectosComponent {
   public Proyectos = [
     {
       "name": "Proyectos personales",
-      "Descripcion": "Bla bnla bla asdlasdnasljdnb",
       "proyectos": [
         {
-          "tagColor": "blue",
+          "name": "MermasApp",
+          "descripction": "Software web para el control de mermas y alertas tempranas de productos próximos a vencer. Cuenta con escáner de barras móvil en React Native.",
+          "status": "Construcción",
+          "typeApp": "Aplicativo Web & Móvil",
+          "repositorio": "https://github.com/RichardFuentes369/coreman",
+          "lenguajes": [
+            { 'name': 'Node', 'icon': 'devicon-nodejs-plain colored' },
+            { 'name': 'NestJS', 'icon': 'devicon-nestjs-original colored' },
+            { 'name': 'Angular', 'icon': 'devicon-angular-plain colored' },
+            { 'name': 'React Native', 'icon': 'devicon-reactnative-original colored' }
+          ]
+        },
+        {
+          "name": "Coreman",
+          "descripction": "Software web para la gestión centralizada de permisos, módulos y autenticación en arquitecturas distribuidas.",
+          "status": "Construcción",
+          "typeApp": "Aplicativo Web",
+          "repositorio": "https://github.com/RichardFuentes369/coreman",
+          "lenguajes": [
+            { 'name': 'Node', 'icon': 'devicon-nodejs-plain colored' },
+            { 'name': 'NestJS', 'icon': 'devicon-nestjs-original colored' },
+            { 'name': 'Angular', 'icon': 'devicon-angular-plain colored' }
+          ]
+        },
+        {
           "name": "Monedero",
-          "descripction": "Software encargado de gestionar los ingresos y gastos de cualquier persona que lo use. Este se debe alimentar manualmente",
+          "descripction": "Sistema de gestión de finanzas personales para el control detallado de ingresos y gastos dinámicos.",
           "status": "Finalizado",
-          "typeApp": "Aplicativo web",
+          "typeApp": "Aplicativo Web",
           "repositorio": "https://github.com/RichardFuentes369/Monedero",
           "lenguajes": [
-            {
-              'name': 'Php',
-              'color': 'blue',
-              'icon': 'devicon-php-plain colored'
-            },
-            {
-              'name': 'Laravel',
-              'color': 'red',
-              'icon': 'devicon-laravel-plain colored'
-            },
-            {
-              'name': 'Vue',
-              'color': 'green',
-              'icon': 'devicon-vuejs-plain colored'
-            },
-            {
-              'name': 'JavaScript',
-              'color': 'blue',
-              'icon': 'devicon-javascript-plain colored'
-            }
+            { 'name': 'PHP', 'icon': 'devicon-php-plain colored' },
+            { 'name': 'Laravel', 'icon': 'devicon-laravel-plain colored' },
+            { 'name': 'Vue.js', 'icon': 'devicon-vuejs-plain colored' },
+            { 'name': 'JavaScript', 'icon': 'devicon-javascript-plain colored' }
           ]
         },
         {
-          "tagColor": "blue",
-          "name": "Inventario",
-          "descripction": "Software encargado de llevar un inventario de productos",
-          "status": "Finalizado",
-          "typeApp": "Aplicativo web",
-          "repositorio": "https://github.com/RichardFuentes369/Inventario",
-          "lenguajes": [
-            {
-              'name': 'Php',
-              'color': 'blue',
-              'icon': 'devicon-php-plain colored'
-            },
-            {
-              'name': 'Laravel',
-              'color': 'red',
-              'icon': 'devicon-laravel-plain colored'
-            },
-            {
-              'name': 'Vue',
-              'color': 'green',
-              'icon': 'devicon-vuejs-plain colored'
-            },
-            {
-              'name': 'JavaScript',
-              'color': 'blue',
-              'icon': 'devicon-javascript-plain colored'
-            }
-          ]
-        },
-        {
-          "tagColor": "blue",
           "name": "Restaurante",
-          "descripction": "Software encargado de administrar los precios, platos, menus y recaudacion de dinero del negocio",
+          "descripction": "Plataforma para administrar precios, menús, comandas y recaudación financiera en establecimientos gastronómicos.",
           "status": "Finalizado",
-          "typeApp": "Aplicativo web",
+          "typeApp": "Aplicativo Web",
           "repositorio": "https://github.com/RichardFuentes369/restaurante",
           "lenguajes": [
-            {
-              'name': 'Php',
-              'color': 'blue',
-              'icon': 'devicon-php-plain colored'
-            },
-            {
-              'name': 'Laravel',
-              'color': 'red',
-              'icon': 'devicon-laravel-plain colored'
-            },
-            {
-              'name': 'Vue',
-              'color': 'green',
-              'icon': 'devicon-vuejs-plain colored'
-            },
-            {
-              'name': 'JavaScript',
-              'color': 'blue',
-              'icon': 'devicon-javascript-plain colored'
-            }
+            { 'name': 'PHP', 'icon': 'devicon-php-plain colored' },
+            { 'name': 'Laravel', 'icon': 'devicon-laravel-plain colored' },
+            { 'name': 'Vue.js', 'icon': 'devicon-vuejs-plain colored' }
           ]
         },
         {
-          "tagColor": "blue",
-          "name": "Valet-parking",
-          "descripction": "Software encargado de registra el movimiento de un parqueadero de vehiculos y a su vez facturar dependiendo del tipo de vehivulo, moto o carro y la fraccion de la hora, dia, semana,mes",
+          "name": "Valet Parking",
+          "descripction": "Control de movimientos y facturación automatizada para parqueaderos según categoría de vehículo y fracciones de tiempo.",
           "status": "Finalizado",
-          "typeApp": "Aplicativo web",
+          "typeApp": "Aplicativo Web",
           "repositorio": "https://github.com/RichardFuentes369/valetParking",
           "lenguajes": [
-            {
-              'name': 'Php',
-              'color': 'blue',
-              'icon': 'devicon-php-plain colored'
-            },
-            {
-              'name': 'Laravel',
-              'color': 'red',
-              'icon': 'devicon-laravel-plain colored'
-            },
-            {
-              'name': 'Vue',
-              'color': 'green',
-              'icon': 'devicon-vuejs-plain colored'
-            },
-            {
-              'name': 'JavaScript',
-              'color': 'blue',
-              'icon': 'devicon-javascript-plain colored'
-            }
+            { 'name': 'PHP', 'icon': 'devicon-php-plain colored' },
+            { 'name': 'Laravel', 'icon': 'devicon-laravel-plain colored' },
+            { 'name': 'Vue.js', 'icon': 'devicon-vuejs-plain colored' }
           ]
         },
         {
-          "tagColor": "blue",
-          "name": "Sisconotas",
-          "descripction": "Software encargado de registrar la notas de los alumnos de x colegio del grado 0 al grado 5to",
-          "status": "Finalizado",
-          "typeApp": "Aplicativo web",
-          "repositorio": "https://github.com/RichardFuentes369/Sisconotas",
-          "lenguajes": [
-            {
-              'name': 'Php',
-              'color': 'blue',
-              'icon': 'devicon-php-plain colored'
-            },
-            {
-              'name': 'Laravel',
-              'color': 'red',
-              'icon': 'devicon-laravel-plain colored'
-            },
-            {
-              'name': 'JavaScript',
-              'color': 'blue',
-              'icon': 'devicon-javascript-plain colored'
-            }
-          ]
-        },
-        {
-          "tagColor": "blue",
           "name": "ChatInterno Web-App",
-          "descripction": "Software web para la comunicación de personal interno de una empresa o negocio",
+          "descripction": "Sistema web para la comunicación en tiempo real entre colaboradores internos de una organización.",
           "status": "Finalizado",
-          "typeApp": "Aplicativo web",
+          "typeApp": "Aplicativo Web",
           "repositorio": "https://github.com/RichardFuentes369/chatLaravel",
           "lenguajes": [
-            {
-              'name': 'Php',
-              'color': '#507CF2',
-              'icon': 'devicon-php-plain colored'
-            },
-            {
-              'name': 'Laravel',
-              'color': 'red',
-              'icon': 'devicon-laravel-plain colored'
-            },
-            {
-              'name': 'JavaScript',
-              'color': 'blue',
-              'icon': 'devicon-javascript-plain colored'
-            }
+            { 'name': 'PHP', 'icon': 'devicon-php-plain colored' },
+            { 'name': 'Laravel', 'icon': 'devicon-laravel-plain colored' },
+            { 'name': 'JavaScript', 'icon': 'devicon-javascript-plain colored' }
           ]
-        },
-        {
-          "tagColor": "blue",
-          "name": "Template core - angular nest",
-          "descripction": " Software web para gestión de permisos y modulos",
-          "status": "Construcción",
-          "typeApp": "Aplicativo web",
-          "repositorio": "https://github.com/RichardFuentes369/angular_csr_nest",
-          "lenguajes": [
-            {
-              'name': 'Node',
-              'color': 'red',
-              'icon': 'devicon-nodejs-plain colored'
-            },            
-            {
-              'name': 'Nest',
-              'color': 'red',
-              'icon': 'devicon-nestjs-original colored'
-            },
-            {
-              'name': 'Angular',
-              'color': 'red',
-              'icon': 'devicon-angular-plain'
-            }
-          ]
-        },
-      ],
-    },
-  ]
+        }
+      ]
+    }
+  ];
 
 }

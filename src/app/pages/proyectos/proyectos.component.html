@@ -1,31 +1,53 @@
-<div>
-  <div class="" *ngFor="let Participacion of Proyectos">
+<div class="projects-container">
+  <div class="main-projects-card">
+    
+    <!-- Encabezado de la Sección -->
+    <div class="projects-header">
+      <span class="section-tag">Portafolio</span>
+      <h3>Proyectos Destacados & Software Desarrollado</h3>
+      <p>Aplicaciones web y móviles construidas con buenas prácticas y arquitecturas escalables</p>
+    </div>
 
-    <div class="card m-2 p-4" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
-      <div class="row">
-        <div class="col-md-4 text-center" *ngFor="let proyecto of Participacion.proyectos">
-          <div class="card mt-4 mb-4">
-            <div class="card-body">
-              <h5 class="card-title">{{proyecto.name}}</h5>
-
-              <div class="card-body">
-                <textarea class="form-control" style="resize: none;" cols="20" rows="6" readonly>{{proyecto.descripction}}</textarea>
-              </div>
-
-              <div class="card-footer">
-                <div class="col-sm-12 row">
-                  <div class="mr-2 ml-1" *ngFor="let lenguaje of proyecto.lenguajes">
-                    <i class="fab " [class] = "lenguaje.icon"  [title]="lenguaje.name"></i>
-                  </div>
-                </div>
-                <a class="btn btn-sm btn-primary mt-2" [href]="proyecto.repositorio" target="_blank">Ir a</a>
-              </div>
+    <!-- Grilla de Proyectos -->
+    <div *ngFor="let grupo of Proyectos">
+      <div class="projects-grid">
+        <div class="project-card" *ngFor="let proyecto of grupo.proyectos">
+          
+          <div class="card-content">
+            <!-- Encabezado de la Tarjeta -->
+            <div class="card-top">
+              <span class="app-type">
+                <i class="fas fa-globe text-primary"></i> {{proyecto.typeApp}}
+              </span>
+              <span class="status-badge" [ngClass]="proyecto.status.toLowerCase()">
+                <span class="status-dot"></span>
+                {{proyecto.status}}
+              </span>
             </div>
+
+            <!-- Título y Descripción -->
+            <h4 class="project-title">{{proyecto.name}}</h4>
+            <p class="project-description">{{proyecto.descripction}}</p>
           </div>
+
+          <!-- Pie de Tarjeta (Stack Tecnológico + Repositorio) -->
+          <div class="card-footer-custom">
+            <div class="tech-stack">
+              <i *ngFor="let lenguaje of proyecto.lenguajes" 
+                 [class]="lenguaje.icon + ' tech-icon'" 
+                 [title]="lenguaje.name">
+              </i>
+            </div>
+            
+            <a class="repo-btn" [href]="proyecto.repositorio" target="_blank" title="Ver código fuente">
+              <i class="fab fa-github"></i>
+              <span>Código</span>
+            </a>
+          </div>
+
         </div>
       </div>
     </div>
 
   </div>
-
 </div>

@@ -1,53 +1,81 @@
-.main-layout {
+:host {
+  display: block;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.app-wrapper {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-color: var(--bg-main);
+}
+
+.app-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+/* Sidebar con transición suave al encoger */
+.app-sidebar {
+  width: 250px;
+  background: var(--bg-card);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  z-index: 1000;
+  transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Ancho cuando está encogido */
+.app-sidebar.collapsed {
+  width: 75px;
+}
+
+.app-main-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: var(--bg-main);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.content-container {
+  max-width: 1100px;
   width: 100%;
-  overflow: hidden; 
-}
-
-#content-scroll-area {
-  flex: 1;               
-  overflow-y: auto;      
-  background-color: #f8f9fc;
-  -webkit-overflow-scrolling: touch;
-}
-
-.linea-tiempo {
-  position: relative;
-  max-width: 95vw;
   margin: 0 auto;
-  font-family: Arial;
+  padding: 2rem 1.5rem 1rem 1.5rem;
+  flex: 1;
 }
 
-.linea-tiempo::before {
-  content: '';
-  position: absolute;
-  width: 3px;
-  background-color: #000;
-  left: 50%;
-  height: 100%;
-  border-radius: 10px;
+/* Footer integrado dentro del área escroleable */
+.app-footer-integrated {
+  width: 100%;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-card);
+  padding: 1.25rem 0;
+  margin-top: 2rem;
 }
 
-.momento {
-  position: relative;
-  width: 45%;
-  margin-bottom: 20px;
-}
+@media (max-width: 992px) {
+  .app-body {
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+  .app-sidebar, .app-sidebar.collapsed {
+    width: 100% !important;
+    height: auto !important;
+    border-right: none;
+    position: relative;
+    z-index: 1000;
+  }
 
-.momento:nth-child(even) {
-  left: 55%;
-}
-
-
-.photo-presentacion {
-  border-radius: 50%;
-  height: 17rem !important;
-  width: 16rem !important;
-  object-fit: cover; 
-}
-
-.card {
-  box-shadow: 7px 7px 15px #592A08;
+  .content-container {
+    padding: 1rem 0.75rem;
+  }
 }

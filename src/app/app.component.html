@@ -1,16 +1,25 @@
-<div class="main-layout">
-  <header id="header-wrapper">
+<div class="app-wrapper">
+  <!-- Banner Superior -->
+  <header class="top-banner-wrapper">
     <app-globales-banner></app-globales-banner>
-    <app-globales-navbar></app-globales-navbar>
   </header>
 
-  <main id="content-scroll-area" class="flex-grow-1">
-    <div class="container mt-4 mb-4">
-      <router-outlet></router-outlet>
-    </div>
-  </main>
+  <div class="app-body">
+    <!-- Sidebar con evento de encogimiento -->
+    <aside class="app-sidebar" [class.collapsed]="isSidebarCollapsed">
+      <app-globales-navbar (sidebarCollapsed)="isSidebarCollapsed = $event"></app-globales-navbar>
+    </aside>
 
-  <footer id="footer-wrapper">
-    <app-globales-footer></app-globales-footer>
-  </footer>
+    <!-- Área de contenido principal -->
+    <main class="app-main-content">
+      <div class="content-container">
+        <router-outlet></router-outlet>
+      </div>
+
+      <!-- Footer ahora integrado ordenadamente dentro del panel de contenido -->
+      <footer class="app-footer-integrated">
+        <app-globales-footer></app-globales-footer>
+      </footer>
+    </main>
+  </div>
 </div>

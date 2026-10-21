@@ -1,33 +1,69 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-white p-0 border-bottom">
-  <div class="container d-flex align-items-center justify-content-between">
-    
-    <button
-      class="navbar-toggler my-2"
-      type="button"
-      (click)="openToogle()"
-    >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="navbar-brand d-lg-none fw-bold text-primary mx-auto">
-      {{ tituloActual }}
+<nav class="sidebar-nav" [class.mini-sidebar]="isCollapsed">
+  
+  <!-- Header Desktop (Escritorio) -->
+  <div class="sidebar-header d-none d-lg-flex">
+    <div class="user-mini-profile" *ngIf="!isCollapsed">
+      <span class="status-dot"></span>
+      <span class="user-title">Javier Barón</span>
     </div>
+    
+    <button class="collapse-toggle-btn" (click)="toggleSidebar()" [title]="isCollapsed ? 'Expandir menú' : 'Colapsar menú'">
+      <i class="fas" [ngClass]="isCollapsed ? 'fa-chevron-right' : 'fa-chevron-left'"></i>
+    </button>
+  </div>
 
-    <div class="navbar-collapse" [ngClass]="xxx">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item" routerLinkActive="activo">
-          <a class="nav-link p-0 text-center" routerLink="/about">Sobre mí</a>
-        </li>
-        <li class="nav-item" routerLinkActive="activo">
-          <a class="nav-link p-0 text-center" routerLink="/estudios">Estudios</a>
-        </li>
-        <li class="nav-item" routerLinkActive="activo">
-          <a class="nav-link p-0 text-center" routerLink="/lenguajes">Lenguajes</a>
-        </li>
-        <li class="nav-item" routerLinkActive="activo">
-          <a class="nav-link p-0 text-center" routerLink="/proyectos">Proyectos</a>
-        </li>
-      </ul>
+  <!-- Header Móvil (Barra superior responsive) -->
+  <div class="mobile-nav-bar d-flex d-lg-none align-items-center justify-content-between p-3">
+    <div class="nav-brand-mobile">
+      <span class="brand-dot"></span>
+      <span class="brand-text">{{ tituloActual }}</span>
+    </div>
+    <div class="mobile-actions">
+      <button class="theme-toggle-btn" (click)="toggleDarkMode()" title="Modo Oscuro">
+        <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+      </button>
+      <button class="menu-toggle-btn" (click)="openToogle()" title="Menú">
+        <i class="fas" [ngClass]="isMenuOpen ? 'fa-times' : 'fa-bars'"></i>
+      </button>
     </div>
   </div>
+
+  <!-- Lista de Navegación -->
+  <div class="nav-links-wrapper" [class.mobile-open]="isMenuOpen">
+    <ul class="nav-list">
+      <li class="nav-item" routerLinkActive="activo" [routerLinkActiveOptions]="{ exact: true }">
+        <a class="nav-link" routerLink="/about" (click)="isMenuOpen = false" [attr.title]="isCollapsed ? 'Sobre mí' : null">
+          <i class="fas fa-user nav-icon"></i>
+          <span class="link-text">Sobre mí</span>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="activo">
+        <a class="nav-link" routerLink="/estudios" (click)="isMenuOpen = false" [attr.title]="isCollapsed ? 'Estudios' : null">
+          <i class="fas fa-graduation-cap nav-icon"></i>
+          <span class="link-text">Estudios</span>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="activo">
+        <a class="nav-link" routerLink="/lenguajes" (click)="isMenuOpen = false" [attr.title]="isCollapsed ? 'Lenguajes' : null">
+          <i class="fas fa-code nav-icon"></i>
+          <span class="link-text">Lenguajes</span>
+        </a>
+      </li>
+      <li class="nav-item" routerLinkActive="activo">
+        <a class="nav-link" routerLink="/proyectos" (click)="isMenuOpen = false" [attr.title]="isCollapsed ? 'Proyectos' : null">
+          <i class="fas fa-laptop-code nav-icon"></i>
+          <span class="link-text">Proyectos</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Footer Desktop -->
+  <div class="sidebar-footer d-none d-lg-flex">
+    <button class="theme-toggle-btn-full" (click)="toggleDarkMode()">
+      <i class="fas" [ngClass]="isDarkMode ? 'fa-sun' : 'fa-moon'"></i>
+      <span class="link-text" *ngIf="!isCollapsed">{{ isDarkMode ? 'Modo Claro' : 'Modo Oscuro' }}</span>
+    </button>
+  </div>
+
 </nav>

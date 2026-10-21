@@ -1,54 +1,38 @@
-<div>
-  <div id="accordion" class="m-2">
-    <div class="card" style="box-shadow: 7px 7px 15px #592A08; height: 100%;" >
-      <div class="card-body">
-        <div
-        class="card mb-2"
-        *ngFor="
-          let item of Lenguajes
-          let i = index
-        ">
-        <div class="card-header" [id]="'heading'+i">
-          <h5 class="mb-0">
-            <button
-              class="btn btn-link"
-              data-toggle="collapse"
-              [attr.data-target]="'#collapse'+i"
-              aria-expanded="true"
-              [attr.aria-controls]="'#collapse'+i"
-              (click)="openCollapse(i)"
-            >
-              {{item.name}}
-              <span class="badge badge-primary badge-pill">({{item.lenguajes.length}})</span>
-            </button>
-          </h5>
+<div class="skills-container">
+  <div class="main-skills-card">
+    
+    <!-- Encabezado de la vista -->
+    <div class="skills-header">
+      <span class="section-tag">Stack Tecnológico</span>
+      <h3>Tecnologías, Herramientas & Frameworks</h3>
+      <p>Ecosistema de herramientas que utilizo para el desarrollo de software escalable</p>
+    </div>
+
+    <!-- Grilla principal de categorías -->
+    <div class="skills-main-grid">
+      <div class="skill-category-card" *ngFor="let item of Lenguajes">
+        <div class="category-header">
+          <div class="category-title">
+            <span class="category-dot"></span>
+            <h4>{{item.name}}</h4>
+          </div>
+          <span class="count-badge">{{item.lenguajes.length}} grupos</span>
         </div>
 
-        <div [id]="'collapse'+i" class="collapse" [ngClass]="item.expandir == true ? 'show' : ''" a-labelledby="headingOne" data-parent="#accordion">
-
-          <div class="container">
-            <div
-              class="card mt-2 mb-2"
-              *ngFor="
-                let lengua of item.lenguajes
-              "
-            >
-              <div class="card-header">
-                {{lengua.name}} ({{lengua.frameworks.length}})
-              </div>
-              <div class="card-body">
-                <ul *ngFor="let frame of lengua.frameworks">
-                  <li>{{frame}}</li>
-                </ul>
+        <div class="subgroups-list">
+          <div class="subgroup-item" *ngFor="let lengua of item.lenguajes">
+            <h5 class="subgroup-name">{{lengua.name}}</h5>
+            
+            <div class="frameworks-chips">
+              <div class="chip-item" *ngFor="let frame of lengua.frameworks">
+                <i *ngIf="frame.icon" [class]="frame.icon + ' chip-icon'"></i>
+                <span>{{frame.name}}</span>
               </div>
             </div>
           </div>
-
         </div>
-      </div>
       </div>
     </div>
 
   </div>
 </div>
-

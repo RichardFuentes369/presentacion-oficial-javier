@@ -8,7 +8,6 @@ import moment from 'moment';
 })
 export class AboutmeComponent {
 
-
   public Trabajos = [
     {
       "empresa": "Nexura International SAS",
@@ -34,31 +33,26 @@ export class AboutmeComponent {
     moment.locale("es");
     const a = moment([moment().format('YYYY'), moment().format('MM'), moment().format('DD')]);
     const b = moment([1996, 6, 1]);
-
     const anhos = a.diff(b, 'year')
     return anhos
   }
 
   tiempoLaborado(fechaInicio: string, fechaFin:string){
-
     let fI = fechaInicio.split('-')
     let fF = fechaFin.split('-')
 
     moment.locale("es");
     const a = moment([fF[2],fF[1],fF[0]]);
     const b = moment([fI[2],fI[1],fI[0]]);
-
     let respuesta = ''
 
     if( a.diff(b, 'month') > 0 ) {
-
       let anhos = a.diff(b, 'years')
       let meses = a.diff(b, 'month') - (a.diff(b, 'years') * 12)
 
       if(anhos > 0){
         respuesta += anhos + ' años'
       }
-
       if(meses > 0){
         if(respuesta){
           respuesta += ' y ' + meses + ' meses'
@@ -66,11 +60,7 @@ export class AboutmeComponent {
           respuesta += meses + ' meses'
         }
       }
-
     }
-
     return respuesta
-
   }
-
 }

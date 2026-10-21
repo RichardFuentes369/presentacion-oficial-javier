@@ -1,89 +1,99 @@
-<div id="content-scroll-area">
-  <div class="card" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
-    <div class="card-body">
-      <div class="col-sm-12 row">
-        <div class="col-sm-6 text-center mb-4">
-          <div class="col-sm-12">
-            <img class="img-thumbnail photo-presentacion" src="./assets/img/me.jpeg" alt="">
-          </div>
-          <div class="col-sm-12">
-            <a href="https://drive.google.com/file/d/1-JA5IsUy6woEotWihQ_shPUWVq7EkXCB/view?usp=drive_link"
-              target="_blank">Hoja de vida</a>
-          </div>
-          <div class="col-sm-12">
-            <a href="https://api.whatsapp.com/send?phone=573504284093" target="_blank">WhatsApp</a>
-          </div>
-          <div class="col-sm-12">
-            <a href="https://www.linkedin.com/in/javier-ricardo-baron-fuentes-79295534b/" target="_blank">LinkedIn</a>
-          </div>
-          <div class="col-sm-12">
-            <a href="https://github.com/RichardFuentes369" target="_blank">GitHub</a>
-          </div>
-          <!-- <div class="col-sm-12">
-            <a href="https://drive.google.com/file/d/1-JA5IsUy6woEotWihQ_shPUWVq7EkXCB/view?usp=drive_link"
-              target="_blank">Cv</a>
-          </div> -->
+<div class="about-container">
+  <!-- Hero / Card Principal -->
+  <div class="main-profile-card">
+    <div class="profile-grid">
+      
+      <!-- Columna Izquierda: Perfil + Social -->
+      <div class="profile-sidebar">
+        <div class="avatar-wrapper">
+          <img class="photo-presentacion" src="./assets/img/me.jpeg" alt="Javier Ricardo Baron Fuentes">
+          <span class="status-indicator" title="Disponible para trabajar"></span>
         </div>
-        <div class="col-sm-6">
-          <p class="">
-            Mi nombre es Javier Ricardo Baron Fuentes y en la actualidad tengo {{calcularEdad()}} años.
+        
+        <h2 class="profile-name">Javier Ricardo Barón</h2>
+        <p class="profile-role">
+          <i class="fas fa-code text-primary"></i> Ing. de Sistemas & Dev FullStack
+        </p>
+
+        <div class="social-links">
+          <a href="https://drive.google.com/file/d/1valjjDz2Z5Ag4DxyWZIdvxhhXWnT0mUE/view?usp=sharing" target="_blank" class="social-btn btn-primary-cv">
+            <i class="fas fa-file-download"></i> Descargar CV
+          </a>
+          <div class="social-grid">
+            <a href="https://api.whatsapp.com/send?phone=573504284093" target="_blank" class="social-icon-btn whatsapp" title="WhatsApp">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/javier-ricardo-baron-fuentes-79295534b/" target="_blank" class="social-icon-btn linkedin" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/RichardFuentes369" target="_blank" class="social-icon-btn github" title="GitHub">
+              <i class="fab fa-github"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Contenido Biografía -->
+      <div class="profile-content">
+        <div class="bio-header">
+          <span class="section-tag">Perfil Profesional</span>
+          <h3>Transformando ideas complejas en software escalable</h3>
+        </div>
+
+        <div class="bio-body">
+          <p class="lead-text">
+            ¡Hola! Soy Javier Barón (<strong>{{calcularEdad()}} años</strong>). Desarrollador enfocado en la construcción de soluciones de software robustas, eficientes y orientadas a la experiencia de usuario.
           </p>
 
-          <p class="">
-            Soy un desarrollador de sistemas con experiencia en transformar ideas complejas en software funcional y
-            eficiente.
+          <div class="skills-highlight-grid">
+            <div class="highlight-item">
+              <i class="fas fa-layer-group"></i>
+              <div>
+                <strong>Desarrollo Web (SPA / MPA)</strong>
+                <span>Especialista en frontend y backend limpio.</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-plug"></i>
+              <div>
+                <strong>Integración de APIs & Endpoints</strong>
+                <span>Consumo, seguridad y servicios REST.</span>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <i class="fas fa-database"></i>
+              <div>
+                <strong>Bases de Datos & Análisis</strong>
+                <span>Modelado relacional y NoSQL eficiente.</span>
+              </div>
+            </div>
+          </div>
 
-            Mi enfoque principal es crear soluciones robustas y escalables que impulsen el crecimiento y la optimización
-            de negocios, integrando buenas practicas
-            y soluciones eficientes en base a la necesidades o problemas que se presenten.
-            Ademas de ello me especializo en la construcción de paginas web (spa,mpa), desarrollos de enpoint
-            consumibles y la creación de ecosistemas amigables generando
-            una buena experiencia de usuario.
-
-            Del desarrollo de software me gusta y me apasióna tanto el backend como el frontend en conjunto con la base
-            de datos y el analisis de los mismos.
-
-            Estoy comprometido con la entrega de código de alta calidad, garantizando mi desarrollo estando dispuesto a
-            colaborar, soluciónando bugs o ayudando a mis compañeros a solucionar
-            problemas para así lograr satisfaser las necesidades del cliente.
+          <p class="text-secondary">
+            En mi trayectoria laboral he liderado proyectos desde el levantamiento de requerimientos hasta la puesta en marcha final. Graduado de Tecnólogo en Desarrollo de Sistemas Informáticos y actualmente en 10° semestre de Ingeniería de Sistemas en las Unidades Tecnológicas de Santander (UTS).
           </p>
+        </div>
+      </div>
 
-          <p class="">
-            Entre los trabajos en los cuales e participado puedo mencionar que e logrado aprender y poner en practica
-            arquitecturas limpias, desarrollo de chatbots, aprovechamiento de flujos de procesos,
-            generacion de plantillas, desarrollo de interfaces, soluciones escalables, conexion de enpoint con terceros
-            como pasarelas de pagos o envio masivo de correos y muchas otras cosas...
+    </div>
+  </div>
 
-            En mi ultima experiencia laboral, fui el encargado de desarrollar un modulo completo desde su creación hasta
-            su entrega final. Acompañando al cliente desde el levantamiento de requerimienos, desarrollo
-            y puesta en marcha. Logrando entregar una solución optima y satisfactoria para el cliente.
-          </p>
+  <!-- Línea de Tiempo de Experiencia -->
+  <div class="experience-card">
+    <div class="section-title">
+      <h3><i class="fas fa-briefcase text-primary"></i> Experiencia Laboral</h3>
+      <p>Trayectoria y empresas con las que he colaborado</p>
+    </div>
 
-          <p class="">
-            En lo academico, soy tecnologo en desarrollo de sistemas informaticos de las Unidades Tecnologicas de
-            Santander (UTS). Actualmente me encuentro culminando mi ciclo de ingenieria cursando 10 semestre luego de 4
-            años de experiencia laboral.
-          </p>
+    <div class="timeline-container">
+      <div *ngFor="let item of Trabajos" class="timeline-item-card">
+        <div class="timeline-badge">{{item.temporada}}</div>
+        <div class="timeline-details">
+          <h4>{{item.empresa}}</h4>
+          <span class="timeline-period"><i class="far fa-calendar-alt"></i> {{item.periodo}}</span>
+          <span class="timeline-duration"><i class="far fa-clock"></i> {{item.tiempo}}</span>
         </div>
       </div>
     </div>
   </div>
-
-  <div class="card mt-4 mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
-    <div class="card-header">
-      <h3>Experiencia</h3>
-    </div>
-  </div>
-  <div class="card mb-2 m-2" style="box-shadow: 7px 7px 15px #592A08; height: 100%;">
-    <div class="card-body text-center">
-      <div class="linea-tiempo">
-        <div *ngFor="let item of Trabajos" class="momento">
-          <h3>{{item.temporada}}</h3>
-          <div class="descripcion">
-            {{item.empresa}} <br> {{item.periodo}} <br> {{item.tiempo}}
-          </div>
-        </div>
-      </div>
-    </div>
-  </div> 
 </div>

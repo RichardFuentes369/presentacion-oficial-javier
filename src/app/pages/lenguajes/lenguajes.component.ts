@@ -10,94 +10,80 @@ export class LenguajesComponent {
   public Lenguajes = [
     {
       "name": "Backend",
-      "expandir": true,
       "lenguajes": [
         {
-          "name": "Node",
-          "tagColor": "blue",
+          "name": "Node.js",
           "frameworks": [
-            'Nest'
+            { "name": "NestJS", "icon": "devicon-nestjs-original colored" }
           ]
         },
         {
-          "name": "Php",
-          "tagColor": "blue",
+          "name": "PHP",
           "frameworks": [
-            'Laravel',
-            'Codenigther'
+            { "name": "Laravel", "icon": "devicon-laravel-plain colored" },
+            { "name": "CodeIgniter", "icon": "devicon-codeigniter-plain colored" }
           ]
         }
       ],
     },
     {
       "name": "Frontend",
-      "expandir": false,
       "lenguajes": [
-          {
-          "name": "Css",
-          "tagColor": "blue",
+        {
+          "name": "Frameworks & CSS",
           "frameworks": [
-            'Boostrap4',
-            'Boostrap5',
-            'Element ui',
+            { "name": "Bootstrap 4", "icon": "devicon-bootstrap-plain colored" },
+            { "name": "Bootstrap 5", "icon": "devicon-bootstrap-plain colored" },
+            { "name": "Element UI", "icon": "devicon-elementui-plain colored" }
           ]
         },
         {
-          "name": "Fuentes",
-          "tagColor": "blue",
+          "name": "Recursos",
           "frameworks": [
-            'GoogleFonts',
-          ]
-        },
-        {
-          "name": "Iconos",
-          "tagColor": "blue",
-          "frameworks": [
-            'FontAwesome',
+            { "name": "Google Fonts", "icon": "fas fa-font text-primary" },
+            { "name": "FontAwesome", "icon": "fab fa-font-awesome text-primary" }
           ]
         }
       ],
     },
     {
-      "name": "Bases de datos",
-      "expandir": false,
+      "name": "Móvil",
       "lenguajes": [
-          {
-          "name": "Sql",
-          "tagColor": "blue",
-          "frameworks": [
-            'MySql',
-            'PostgreSQl',
-          ]
-        },
         {
-          "name": "NoSql",
-          "tagColor": "blue",
+          "name": "Cross-Platform",
           "frameworks": [
-            'Mongo',
+            { "name": "React Native", "icon": "devicon-reactnative-original colored" }
           ]
         }
       ],
     },
     {
-      "name": "Versionamiento",
-      "expandir": false,
+      "name": "Bases de Datos",
       "lenguajes": [
-          {
-          "name": "Git",
-          "tagColor": "blue",
+        {
+          "name": "Relacionales & NoSQL",
           "frameworks": [
-            'GitHub',
-            'GitLab',
-            'Azure',
+            { "name": "MySQL", "icon": "devicon-mysql-plain colored" },
+            { "name": "PostgreSQL", "icon": "devicon-postgresql-plain colored" },
+            { "name": "MongoDB", "icon": "devicon-mongodb-plain colored" }
+          ]
+        }
+      ],
+    },
+    {
+      "name": "Versionamiento & DevOps",
+      "lenguajes": [
+        {
+          "name": "Control de Código",
+          "frameworks": [
+            { "name": "Git", "icon": "devicon-git-plain colored" },
+            { "name": "GitHub", "icon": "devicon-github-original" },
+            { "name": "GitLab", "icon": "devicon-gitlab-plain colored" },
+            { "name": "Azure DevOps", "icon": "devicon-azure-plain colored" }
           ]
         },
       ],
     },
-  ]
-
-  openCollapse(position: number){
-    this.Lenguajes[position].expandir = !this.Lenguajes[position].expandir
-  }
+  ];
 
 }

@@ -1,59 +1,59 @@
-<div>
-  <div id="accordion" class="m-2">
-    <div class="card" style="box-shadow: 7px 7px 15px #592A08; height: 100%;" >
-      <div class="card-body">
-        <div
-        class="card mb-2"
-        *ngFor="
-          let item of Estudios
-          let i = index
-        ">
-        <div class="card-header" [id]="'heading'+i">
-          <h5 class="mb-0">
-            <button
-              class="btn btn-link"
-              data-toggle="collapse"
-              [attr.data-target]="'#collapse'+i"
-              aria-expanded="true"
-              [attr.aria-controls]="'#collapse'+i"
-              (click)="openCollapse(i)"
-            >
-              {{item.name}}
-              <span class="badge badge-primary badge-pill">({{item.estudios.length}})</span>
-            </button>
-          </h5>
-        </div>
+<div class="studies-container">
+  <div class="main-studies-card">
+    
+    <!-- Encabezado de la vista -->
+    <div class="studies-header">
+      <span class="section-tag">Educación & Cursos</span>
+      <h3>Formación Académica y Desarrollo Continuo</h3>
+      <p>Trayectoria universitaria y certificaciones profesionales adquiridas</p>
+    </div>
 
-        <div [id]="'collapse'+i" class="collapse" [ngClass]="item.expandir == true ? 'show' : ''" a-labelledby="headingOne" data-parent="#accordion">
+    <!-- Pestañas de Categorías (Estudios / Cursos) -->
+    <div class="category-tabs">
+      <button 
+        *ngFor="let item of Estudios; let i = index" 
+        class="tab-btn" 
+        [class.active]="item.expandir"
+        (click)="selectCategory(i)">
+        <span>{{item.name}}</span>
+        <span class="count-badge">{{item.estudios.length}}</span>
+      </button>
+    </div>
 
-          <div class="container">
-            <div
-              class="card mt-2 mb-2"
-              *ngFor="
-                let cursos of item.estudios
-              "
-            >
-              <div class="card-header">
-                {{cursos.name}} ({{cursos.cursos.length}})
-              </div>
-              <div class="card-body">
-                <ul *ngFor="let curso of cursos.cursos">
-                  <li *ngIf="curso.link == ''">
-                    {{curso.nombre}}
-                  </li>
-                  <li *ngIf="curso.link != ''">
-                    <a [href]="curso.link" target="_blank">{{curso.nombre}}</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
+    <!-- Contenido dinámico de la categoría seleccionada -->
+    <div class="studies-content-wrapper" *ngFor="let item of Estudios">
+      <div class="studies-grid" *ngIf="item.expandir">
+        
+        <div class="study-group-card" *ngFor="let cursoGroup of item.estudios">
+          <div class="group-header">
+            <span class="group-dot"></span>
+            <h4>{{cursoGroup.name}}</h4>
           </div>
+          
+          <ul class="items-list">
+            <li *ngFor="let curso of cursoGroup.cursos" class="list-item">
+              
+              <!-- Elemento sin link -->
+              <div *ngIf="curso.link == ''" class="text-normal">
+                <i class="fas fa-graduation-cap text-primary"></i> 
+                <span>{{curso.nombre}}</span>
+              </div>
+              
+              <!-- Elemento con link de certificado -->
+              <a *ngIf="curso.link != ''" [href]="curso.link" target="_blank" class="link-certificado">
+                <span class="cert-text">
+                  <i class="fas fa-award text-primary"></i> 
+                  <span>{{curso.nombre}}</span>
+                </span>
+                <i class="fas fa-external-link-alt external-icon"></i>
+              </a>
 
+            </li>
+          </ul>
         </div>
-      </div>
+
       </div>
     </div>
 
   </div>
 </div>
-

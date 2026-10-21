@@ -9,43 +9,25 @@ export class EstudiosComponent {
 
   public Estudios = [
     {
-      "name": "Estudios",
+      "name": "Estudios Universitarios",
       "expandir": true,
       "estudios": [
         {
-          "name": "Primaria",
+          "name": "Ingeniería de Sistemas",
           "tagColor": "blue",
           "cursos": [
             {
-              'nombre': 'Instituto Madre del Buen Consejo 2003-2003',
-              'link': ''
-            },
-            {
-              'nombre': 'Colegio Metropolitano del Sur 2004-2007',
+              'nombre': 'Ingeniería de Sistemas - Unidades Tecnológicas de Santander (Cursando 10° Semestre)',
               'link': ''
             },
           ]
         },
         {
-          "name": "Bachillerato",
+          "name": "Tecnología",
           "tagColor": "blue",
           "cursos": [
             {
-              'nombre': 'Instituto Empresarial Gabriela Mistral 2008-2014',
-              'link': ''
-            },
-          ]
-        },
-        {
-          "name": "Universitarios",
-          "tagColor": "blue",
-          "cursos": [
-            {
-              'nombre': 'Tecnología en desarrollo de sistemas informaticos 2015-2019',
-              'link': ''
-            },
-            {
-              'nombre': 'Ingenieria de sistemas 2024',
+              'nombre': 'Tecnología en Desarrollo de Sistemas Informáticos (2015-2019)',
               'link': ''
             },
           ]
@@ -53,31 +35,31 @@ export class EstudiosComponent {
       ],
     },
     {
-      "name": "Cursos",
+      "name": "Cursos & Certificados",
       "expandir": false,
       "estudios": [
         {
-          "name": "Udemy",
+          "name": "Udemy & Especializados",
           "tagColor": "blue",
           "cursos": [
             {
-              'nombre': 'Angular de cero a experto Fernando Herrera',
+              'nombre': 'Angular de cero a experto - Fernando Herrera',
               'link': 'https://www.udemy.com/certificate/UC-70a1a51c-38d4-4dce-aab6-bd28b398f23c/'
             },
             {
-              'nombre': 'Nest desarrollo backend escalable Fernando Herrera',
+              'nombre': 'Nest: Desarrollo backend escalable - Fernando Herrera',
               'link': 'https://www.udemy.com/certificate/UC-4d390a9a-f74f-41ab-a915-37e46323726e/'
             },
             {
-              'nombre': 'React de cero a experto hooks mern Fernando Herrera',
+              'nombre': 'React de cero a experto (Hooks & MERN) - Fernando Herrera',
               'link': ''
             },
             {
-              'nombre': 'Laravel y vue avanzado Jorge Alexis Paz Barrera',
+              'nombre': 'Laravel y Vue avanzado - Jorge Alexis Paz Barrera',
               'link': 'https://www.udemy.com/certificate/UC-bc1323f8-26ed-4240-9d83-97eaba53a460/'
             },
             {
-              'nombre': 'Curso de php y mvc Lubutech dev',
+              'nombre': 'Curso de PHP y MVC - Lubutech dev',
               'link': ''
             },
           ]
@@ -86,8 +68,10 @@ export class EstudiosComponent {
     },
   ]
 
-  openCollapse(position: number){
-    this.Estudios[position].expandir = !this.Estudios[position].expandir
+  selectCategory(position: number) {
+    this.Estudios.forEach((item, index) => {
+      item.expandir = (index === position);
+    });
   }
 
 }
