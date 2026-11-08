@@ -14,7 +14,7 @@ export class ProyectosComponent {
         {
           "name": "MermasApp",
           "descripction": "Software web para el control de mermas y alertas tempranas de productos próximos a vencer. Cuenta con escáner de barras móvil en React Native.",
-          "status": "Construcción",
+          "status": "Finalizado",
           "typeApp": "Aplicativo Web & Móvil",
           "repositorio": "https://github.com/RichardFuentes369/coreman",
           "lenguajes": [
